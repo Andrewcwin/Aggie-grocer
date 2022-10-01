@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 feather.replace();
 
 const controls = document.querySelector('.controls');
