@@ -32,11 +32,12 @@
                                     <h2 class="text-uppercase text-center mb-5">Create
                                         an account</h2>
 
-                                    <form>
+                                    <form id="signup" action="/home.html"
+                                        method="get">
 
                                         <div class="form-outline mb-4">
                                             <input type="text"
-                                                id="form3Example1cg"
+                                                id="name"
                                                 class="form-control
                                                 form-control-lg" />
                                             <label class="form-label"
@@ -45,7 +46,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="email"
-                                                id="form3Example3cg"
+                                                id="email"
                                                 class="form-control
                                                 form-control-lg" />
                                             <label class="form-label"
@@ -54,7 +55,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="password"
-                                                id="form3Example4cg"
+                                                id="password"
                                                 class="form-control
                                                 form-control-lg" />
                                             <label class="form-label"
@@ -63,7 +64,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="password"
-                                                id="form3Example4cdg"
+                                                id="repeatpassword"
                                                 class="form-control
                                                 form-control-lg" />
                                             <label class="form-label"
@@ -75,7 +76,7 @@
                                             justify-content-center mb-5">
                                             <input class="form-check-input me-2"
                                                 type="checkbox" value=""
-                                                id="form2Example3cg" />
+                                                id="checkbox" />
                                             <label class="form-check-label"
                                                 for="form2Example3g">
                                                 I agree all statements in <a
@@ -86,7 +87,7 @@
 
                                         <div class="d-flex
                                             justify-content-center">
-                                            <button type="button"
+                                            <button type="submit"
                                                 class="btn btn-success btn-block
                                                 btn-lg gradient-custom-4
                                                 text-body">Register</button>
@@ -109,6 +110,7 @@
         </section>
 
         <!-- Optional JavaScript -->
+        <script src="script/script.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
