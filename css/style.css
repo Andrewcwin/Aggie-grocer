@@ -14,3 +14,13 @@
     top: 6px;
     left: 6px;
 }
+
+.nav-item svg {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
