@@ -17,20 +17,25 @@ function main() {
         VIDEO.play();
 
         VIDEO.onloadeddata=function() {
-            let resizer=SCALER*
-            Math.min(
-                window.innerWidth/VIDEO.videoWidth,
-                window.innerHeight/VIDEO.videoHeight
-            );
-            SIZE.width=resizer*VIDEO.videoWidth;
-            SIZE.height=resizer*VIDEO.videoHeight;
-            SIZE.x=window.innerWidth/2-SIZE.width/2;
-            SIZE.y=window.innerHeight/2-SIZE.height/2;
+            handleResize();
+            window.addEventListener('resize',handleResize);
             updateCanvas();
         }
     }).catch(function(err) {
         alert("Camera error: "+err);
     })
+}
+
+function handleResize() {
+    let resizer=SCALER*
+    Math.min(
+        window.innerWidth/VIDEO.videoWidth,
+        window.innerHeight/VIDEO.videoHeight
+    );
+    SIZE.width=resizer*VIDEO.videoWidth;
+    SIZE.height=resizer*VIDEO.videoHeight;
+    SIZE.x=window.innerWidth/2-SIZE.width/2;
+    SIZE.y=window.innerHeight/2-SIZE.height/2;
 }
 
 function updateCanvas() {
