@@ -2,7 +2,7 @@ from PIL import Image
 from pytesseract import pytesseract
 
 # Define path to tessaract.exe
-path_to_tesseract = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+path_to_tesseract = 'programs/Tesseract-OCR/tesseract.exe'
 
 # Define path to image
 path_to_image = 'image/grocery2.jpg'
