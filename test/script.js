@@ -1,48 +1,84 @@
-let VIDEO=null;
-let CANVAS=null;
-let CONTEXT=null;
-let SCALER=0.8;
-let SIZE={x:0,y:0,width:0,height:0};
+feather.replace();
 
-function main() {
-    CANVAS=document.getElementById("myCanvas");
-    CONTEXT=CANVAS.getContext("2d");
+const controls = document.querySelector('.controls');
+const cameraOptions = document.querySelector('.video-options>select');
+const video = document.querySelector('video');
+const canvas = document.querySelector('canvas');
+const screenshotImage = document.querySelector('img');
+const buttons = [...controls.querySelectorAll('button')];
+let streamStarted = false;
 
-    let promise=navigator.mediaDevices.getUserMedia({video:true});
-    promise.then(function(signal) {
-        VIDEO=document.createElement("video");
-        VIDEO.srcObject=signal;
-        VIDEO.play();
+const [play, pause, screenshot] = buttons;
 
-        VIDEO.onloadeddata=function() {
-            handleResize();
-            window.addEventListener('resize',handleResize);
-            updateCanvas();
-        }
-    }).catch(function(err) {
-        alert("Camera error: "+err);
-    })
-}
+const constraints = {
+  video: {
+    width: {
+      min: 1280,
+      ideal: 1920,
+      max: 2560,
+    },
+    height: {
+      min: 720,
+      ideal: 1080,
+      max: 1440
+    },
+  }
+};
 
-function handleResize() {
-    CANVAS.width=window.innerWidth;
-    CANVAS.height=window.innerHeight;
-    
-    let resizer=SCALER*
-    Math.min(
-        window.innerWidth/VIDEO.videoWidth,
-        window.innerHeight/VIDEO.videoHeight
-    );
-    SIZE.width=resizer*VIDEO.videoWidth;
-    SIZE.height=resizer*VIDEO.videoHeight;
-    SIZE.x=window.innerWidth/2-SIZE.width/2;
-    SIZE.y=window.innerHeight/2-SIZE.height/2;
-}
+const getCameraSelection = async () => {
+  const devices = await navigator.mediaDevices.enumerateDevices();
+  const videoDevices = devices.filter(device => device.kind === 'videoinput');
+  const options = videoDevices.map(videoDevice => {
+    return `<option value="${videoDevice.deviceId}">${videoDevice.label}</option>`;
+  });
+  cameraOptions.innerHTML = options.join('');
+};
 
-function updateCanvas() {
-    CONTEXT.drawImage(VIDEO,
-        SIZE.x, SIZE.y,
-        SIZE.width, SIZE.height);
+play.onclick = () => {
+  if (streamStarted) {
+    video.play();
+    play.classList.add('d-none');
+    pause.classList.remove('d-none');
+    return;
+  }
+  if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
+    const updatedConstraints = {
+      ...constraints,
+      deviceId: {
+        exact: cameraOptions.value
+      }
+    };
+    startStream(updatedConstraints);
+  }
+};
 
-    window.requestAnimationFrame(updateCanvas);
-}
+const startStream = async (constraints) => {
+  const stream = await navigator.mediaDevices.getUserMedia(constraints);
+  handleStream(stream);
+};
+
+const handleStream = (stream) => {
+  video.srcObject = stream;
+  play.classList.add('d-none');
+  pause.classList.remove('d-none');
+  screenshot.classList.remove('d-none');
+  streamStarted = true;
+};
+
+
+const pauseStream = () => {
+  video.pause();
+  play.classList.remove('d-none');
+  pause.classList.add('d-none');
+};
+
+const doScreenshot = () => {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0);
+  screenshotImage.src = canvas.toDataURL('image/webp');
+  screenshotImage.classList.remove('d-none');
+};
+
+pause.onclick = pauseStream;
+screenshot.onclick = doScreenshot;
