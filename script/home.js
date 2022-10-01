@@ -10,6 +10,7 @@ function getCookie(name) {
 }
 
 window.onload = () => {
+    console.log("here");
     if (getCookie('name')) {
         document.getElementById('welcome-message').innerText = "Welcome, " + getCookie('name') + "!";
     }

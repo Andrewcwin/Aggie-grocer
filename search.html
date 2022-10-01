@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><svg
+                        <a class="nav-link" href="scanning.html"><svg
                                 xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi
                                 bi-cart-plus" viewBox="0 0 16 16">
@@ -48,9 +48,11 @@
                                         0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
                                     </svg></a>
                             </li>
-                            <form class="form-inline my-2 my-lg-0">
+                            <form id="search" action="search.html"
+                                class="form-inline my-2 my-lg-0">
                                 <input class="form-control mr-sm-2"
                                     type="search"
+                                    id="search"
                                     placeholder="Search"
                                     aria-label="Search">
                                 <!-- <button class="btn btn-outline-success my-2
@@ -58,7 +60,7 @@
                                     type="submit">Search</button> -->
                             </form>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><svg
+                                <a class="nav-link" href="profile.html"><svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="16"
                                         height="16" fill="currentColor"
@@ -153,8 +155,35 @@
                                 </svg>
                             </button>
 
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2 sidebar">
+
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h3 id="search-term"></h3>
+                                        <div class="recipe">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-6
+                                                        recipe-image">
+                                                        <img
+                                                            src="#"/>
+                                                    </div>
+                                                    <div class="col-md-6
+                                                        recipe-content">
+                                                        <h3>Recipe Title 1</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <!-- Optional JavaScript -->
+                            <script src="script/search.js"></script>
                             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
                             <script
                                 src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
