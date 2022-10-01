@@ -7,8 +7,6 @@ let SIZE={x:0,y:0,width:0,height:0};
 function main() {
     CANVAS=document.getElementById("myCanvas");
     CONTEXT=CANVAS.getContext("2d");
-    CANVAS.width=window.innerWidth;
-    CANVAS.height=window.innerHeight;
 
     let promise=navigator.mediaDevices.getUserMedia({video:true});
     promise.then(function(signal) {
@@ -27,6 +25,9 @@ function main() {
 }
 
 function handleResize() {
+    CANVAS.width=window.innerWidth;
+    CANVAS.height=window.innerHeight;
+    
     let resizer=SCALER*
     Math.min(
         window.innerWidth/VIDEO.videoWidth,
