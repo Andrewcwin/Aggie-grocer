@@ -24,3 +24,12 @@
     border: 1px solid gray;
     border-radius: 5px;
 }
+
+.recipe {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.recipe-image {
+    border-right: 1px solid gray;
+}
