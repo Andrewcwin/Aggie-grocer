@@ -24,7 +24,7 @@ window.onload = () => {
         document.getElementById('welcome-message').innerText = "Welcome, " + getCookie('name') + "!";
     }
     if (getCookie('recentsearch') && document.getElementById('search-term')) {
-        document.getElementById('search-term').innerText = "Show results for: " + getCookie('recentsearch');
+        document.getElementById('search-term').innerText = "Showing results for: " + getCookie('recentsearch');
     }
     if (document.getElementById('upload') && !getCookie('user')) {
         document.getElementById('upload').disabled = true;
