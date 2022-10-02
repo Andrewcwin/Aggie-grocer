@@ -1,3 +1,11 @@
+body {
+    background-color: #faf7ee;
+}
+
+.navbar {
+    /* background-color: #e8f4ea; */
+}
+
 .help-btn {
     position: fixed;
     right: 20px;
@@ -22,12 +30,14 @@
 
 .sidebar {
     border: 1px solid gray;
+    margin-top: 30px;
     border-radius: 5px;
 }
 
 .recipe {
     border: 1px solid gray;
     border-radius: 5px;
+    background-color: #fcfcfc;
 }
 
 .recipe-image {
