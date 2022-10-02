@@ -30,15 +30,18 @@ body {
 }
 
 .sidebar {
-    border: 1px solid gray;
+    border: 1px solid #4a4a4a;
     margin-top: 30px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #fcfcfc;
 }
 
 .recipe {
-    border: 1px solid gray;
+    border: 1px solid #4a4a4a;
     border-radius: 5px;
     background-color: #fcfcfc;
+    border-width: 1px;
 }
 
 .recipe-image {
@@ -72,10 +75,11 @@ body {
     margin-left: -24px;
     cursor: pointer;
     transition: .2s all ease-in-out;
+    white-space: nowrap;
 }
 
 .nav-side-menu li:hover {
-    color: gray;
+    color: #287c40;
 }
 
 .recipe {
