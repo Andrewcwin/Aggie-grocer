@@ -130,7 +130,7 @@
         var canvas = document.querySelector('#step2 canvas');
         var img = document.querySelector('#step2 img');
         // var img = document.createElement("img");
-        // img.src = "images/grocery2.jpg"
+        img.src = "images/grocery2.jpg"
 
         //setup canvas
         canvas.width = pictureWidth;
@@ -164,11 +164,11 @@
                     });
                 } else {
                     //update crop tool (it creates copies of <img> that we have to update manually)
-                    $('.jcrop-holder img').attr('src', fxCanvas.toDataURL());
+                    $('.jcrop-holder img').attr('src', 'images/grocery2.jpg');
                 }
             })
             //show output from glfx.js
-            .attr('src', fxCanvas.toDataURL());
+            .attr('src', 'images/grocery2.jpg');
     }
 
     function step3() {
@@ -246,10 +246,10 @@
             .brightnessContrast(brightness, contrast)
             .update();
 
-        img.src = fxCanvas.toDataURL();
+        img.src = 'images/grocery2.jpg';
 
         //update crop tool (it creates copies of <img> that we have to update manually)
-        $('.jcrop-holder img').attr('src', fxCanvas.toDataURL());
+        $('.jcrop-holder img').attr('src', 'images/grocery2.jpg');
     });
 
     $('#takePicture').click(function () {
