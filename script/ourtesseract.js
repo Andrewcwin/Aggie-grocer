@@ -7,19 +7,22 @@ fileSelector.addEventListener('change', (event) => {
     Tesseract.recognize(
         fileList[0],
         'eng',
-        { logger: m => document.getElementById('display-image').innerHTML = m.status }
+        { logger: m => document.getElementById('display-image').innerHTML = "Upload Status: " + m.status }
     ).then(({ data: { text } }) => {
-        document.getElementById('display-image').innerHTML = text;
+        var out = "";
 
         // get usable text
-        var rawDat = new text.split();
+        var rawDat = text.split();
         var ingredients = []; // ingredients as string[]
 
         for (var i = 0; i < rawDat.length; i++) {
             if (onlyLetters(rawDat[i])) {
                 ingredients.push(rawDat[i]);
+                out += rawDat[i] + ", ";
             }
         }
+
+        document.getElementById('display-image').innerHTML = "Finished upload! Added " + out + "!";
 
         var json_str = JSON.stringify(ingredients);
         setCookie('ingredients', json_str);
@@ -28,7 +31,7 @@ fileSelector.addEventListener('change', (event) => {
 
 function onlyLetters(str) {
     return /^[a-zA-Z]+$/.test(str);
-  }
+}
 
 function setCookie(name, value, days) {
     var expires = "";

@@ -12,6 +12,21 @@ body {
     top: 0;
 }
 
+.upload-container {
+    background-color: white;
+    border: 1px #4a4a4a solid;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#display-image {
+    margin-top: 10px;
+    background-color: white;
+    border: 1px #4a4a4a solid;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
 .help-btn {
     position: fixed;
     right: 20px;
