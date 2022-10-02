@@ -4,6 +4,7 @@ body {
 
 .navbar {
     /* background-color: #e8f4ea; */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
 .help-btn {
