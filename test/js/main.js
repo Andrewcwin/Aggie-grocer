@@ -129,6 +129,8 @@
     function step2() {
         var canvas = document.querySelector('#step2 canvas');
         var img = document.querySelector('#step2 img');
+        // var img = document.createElement("img");
+        // img.src = "images/grocery2.jpg"
 
         //setup canvas
         canvas.width = pictureWidth;
