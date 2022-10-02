@@ -12,13 +12,14 @@ fileSelector.addEventListener('change', (event) => {
         var out = "";
 
         // get usable text
-        var rawDat = text.split();
+        var rawDat = text.split(" ");
+        console.log(rawDat);
         var ingredients = []; // ingredients as string[]
 
         for (var i = 0; i < rawDat.length; i++) {
             if (onlyLetters(rawDat[i])) {
-                ingredients.push(rawDat[i]);
-                out += rawDat[i] + ", ";
+                ingredients.push(rawDat[i].toLowerCase());
+                out += rawDat[i].toLowerCase() + ", ";
             }
         }
 
@@ -30,7 +31,7 @@ fileSelector.addEventListener('change', (event) => {
 });
 
 function onlyLetters(str) {
-    return /^[a-zA-Z]+$/.test(str);
+    return /^[A-Z]+$/.test(str) && str.length >= 3;
 }
 
 function setCookie(name, value, days) {
