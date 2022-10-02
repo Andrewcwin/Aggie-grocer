@@ -1,17 +1,14 @@
-const tessform = document.getElementById('tessform');
 
-tessform.addEventListener('submit', (event) => {
-    // handle the form data
-    var filepath = tessform.upload.value;
-
-    document.getElementById('submitted').innerHTML = "<p>Hi</p>";
+const fileSelector = document.getElementById('upload');
+fileSelector.addEventListener('change', (event) => {
+    const fileList = event.target.files;
+    console.log(fileList[0].name);
 
     Tesseract.recognize(
-        filepath,
+        fileList[0],
         'eng',
-        { logger: m => console.log(m) }
+        { logger: m => document.getElementById('display-image').innerHTML = m.status }
     ).then(({ data: { text } }) => {
-        console.log(text);
+        document.getElementById('display-image').innerHTML = text;
     })
 });
-

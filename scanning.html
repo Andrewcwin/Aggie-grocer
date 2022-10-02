@@ -160,14 +160,10 @@
                             </button>
 
                             <div class="container">
-                                <form id="tessform" onsubmit="return false">
-                                    <!-- action = python script sand get file -->
-                                    <input type="file" accept="image/*"
-                                        capture="camera"
-                                        id="upload" />
-                                    <input type="submit" value="Upload" />
-                                </form>
-                                <div id="submitted"></div>
+                                <input type="file" accept="image/*"
+                                    capture="camera"
+                                    id="upload" />
+                                <div id="display-image"></div>
                             </div>
                             <script
                                 src='https://unpkg.com/tesseract.js@v2.0.2/dist/tesseract.min.js'></script>
