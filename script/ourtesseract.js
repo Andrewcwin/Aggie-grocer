@@ -23,7 +23,7 @@ fileSelector.addEventListener('change', (event) => {
             }
         }
 
-        document.getElementById('display-image').innerHTML = "Finished upload! Added " + out + "!";
+        document.getElementById('display-image').innerHTML = "Finished upload! Added " + out.substring(0, out.length - 2) + " to your profile!";
 
         var json_str = JSON.stringify(ingredients);
         setCookie('ingredients', json_str);
