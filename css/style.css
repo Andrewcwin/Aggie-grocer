@@ -114,3 +114,19 @@ body {
 .logo-navbar {
     width: 80px;
 }
+
+.ingr-shii {
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    background-color: #fcfcfc;
+    border-width: 1px;
+    margin: 5px;
+}
+
+.recents {
+    border: 1px solid #4a4a4a;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #fcfcfc;
+    height: 330px;
+}
