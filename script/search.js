@@ -30,9 +30,3 @@ function getCookie(name) {
     }
     return null;
 }
-
-window.onload = () => {
-    if (getCookie('recentsearch') && document.getElementById('search-term')) {
-        document.getElementById('search-term').innerText = "Show results for: " + getCookie('recentsearch');
-    }
-};
