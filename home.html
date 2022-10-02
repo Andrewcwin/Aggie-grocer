@@ -181,46 +181,55 @@
                                     <div class="col-md-2 sidebar">
                                         <h4>Sort by</h4>
                                         <ul>
-                                            <li>side bar 1</li>
-                                            <li>side abr 2</li>
-                                            <li>side abr 3</li>
+                                            <li onclick="setCalDesc()">Cal Desc</li>
+                                            <li onclick="setCalAsc()">Cal Asc</li>
+                                            <li onclick="setTimeDesc()">Time
+                                                Desc</li>
                                         </ul>
                                     </div>
                                     <div class="col-md-9">
                                         <h3 id="welcome-message">Welcome!</h3>
-                                        <div class="recipe" data-calories="513"
-                                            data-time="15" data-name="Garlic
-                                            Butter Baked Salmon" data-numing="4"
-                                            data-cost="8">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3
-                                                        recipe-image">
-                                                        <img
-                                                            src="img/Salmon.jpg"/>
-                                                    </div>
-                                                    <div class="col-md-6
-                                                        recipe-content">
-                                                        <a
-                                                            href="https://cafedelites.com/sheet-pan-garlic-butter-baked-salmon/"><h3>Garlic
-                                                                Butter
-                                                                Baked Salmon</h3></a>
-                                                        <h6>Time: 15m | Cal:
-                                                            513 | Cost: $8
-                                                        </h6>
-                                                        <h5>Ingredients</h5>
-                                                        <ul>
-                                                            <li>Salmon</li>
-                                                            <li>Garlic</li>
-                                                            <li>Asparagus</li>
-                                                            <li>Potatoes</li>
-                                                        </ul>
+                                        <div id="mylist">
+                                            <div class="recipe"
+                                                data-calories="513"
+                                                data-time="15" data-name="Garlic
+                                                Butter Baked Salmon"
+                                                data-numing="4"
+                                                data-cost="8">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-3
+                                                            recipe-image">
+                                                            <img
+                                                                src="img/Salmon.jpg"/>
+                                                        </div>
+                                                        <div class="col-md-6
+                                                            recipe-content">
+                                                            <a
+                                                                href="https://cafedelites.com/sheet-pan-garlic-butter-baked-salmon/"><h3>Garlic
+                                                                    Butter
+                                                                    Baked Salmon</h3></a>
+                                                            <h6>Time: 15m | Cal:
+                                                                513 | Cost: $8
+                                                            </h6>
+                                                            <h5>Ingredients</h5>
+                                                            <ul>
+                                                                <li>Salmon</li>
+                                                                <li>Garlic</li>
+                                                                <li>Asparagus</li>
+                                                                <li>Potatoes</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="recipe" data-calories="185"
-                                            data-time="75" data-name="Spaghetti sauce with Ground Beef" data-numing="5"
-                                            data-cost="10">
+                                            <div class="recipe"
+                                                data-calories="185"
+                                                data-time="75"
+                                                data-name="Spaghetti
+                                                sauce with Ground Beef"
+                                                data-numing="5"
+                                                data-cost="10">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-3
@@ -230,8 +239,13 @@
                                                         </div>
                                                         <div class="col-md-6
                                                             recipe-content">
-                                                            <a href="https://www.allrecipes.com/recipe/158140/spaghetti-sauce-with-ground-beef/"><h3>Spaghetti sauce with Ground Beef</h3></a>
-                                                            <h6>Time: 1hour 15mins | Cal:
+                                                            <a
+                                                                href="https://www.allrecipes.com/recipe/158140/spaghetti-sauce-with-ground-beef/"><h3>Spaghetti
+                                                                    sauce with
+                                                                    Ground Beef</h3></a>
+                                                            <h6>Time: 1hour
+                                                                15mins |
+                                                                Cal:
                                                                 185</h6>
                                                             <h5>Ingredients</h5>
                                                             <ul>
@@ -245,9 +259,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="recipe" data-calories="1020"
-                                            data-time="25" data-name="Alfredo sauce with Ground Beef" data-numing="4"
-                                            data-cost="9">
+                                            <div class="recipe"
+                                                data-calories="1020"
+                                                data-time="25"
+                                                data-name="Alfredo
+                                                sauce with Ground Beef"
+                                                data-numing="4"
+                                                data-cost="9">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-3
@@ -257,12 +275,16 @@
                                                         </div>
                                                         <div class="col-md-6
                                                             recipe-content">
-                                                            <a href="https://www.thisisnotdietfood.com/ground-beef-alfredo/#mv-creation-742-jtr"><h3>Alfredo sauce with Ground Beef</h3></a>
+                                                            <a
+                                                                href="https://www.thisisnotdietfood.com/ground-beef-alfredo/#mv-creation-742-jtr"><h3>Alfredo
+                                                                    sauce with
+                                                                    Ground Beef</h3></a>
                                                             <h6>Time: 25m | Cal:
                                                                 1020</h6>
                                                             <h5>Ingredients</h5>
                                                             <ul>
-                                                                <li>Alfredo Sauce</li>
+                                                                <li>Alfredo
+                                                                    Sauce</li>
                                                                 <li>Spaghetti</li>
                                                                 <li>Garlic</li>
                                                                 <li>Ground Beef</li>
@@ -271,9 +293,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="recipe" data-calories="462"
-                                            data-time="15" data-name="Steak and Asparagus" data-numing="2"
-                                            data-cost="13">
+                                            <div class="recipe"
+                                                data-calories="462"
+                                                data-time="15" data-name="Steak
+                                                and
+                                                Asparagus" data-numing="2"
+                                                data-cost="13">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-3
@@ -283,23 +308,31 @@
                                                         </div>
                                                         <div class="col-md-6
                                                             recipe-content">
-                                                            <a href="https://tasty.co/recipe/steak-with-asparagus"><h3>Steak and Asparagus</h3></a>
+                                                            <a
+                                                                href="https://tasty.co/recipe/steak-with-asparagus"><h3>Steak
+                                                                    and
+                                                                    Asparagus</h3></a>
                                                             <h6>Time: 15m | Cal:
                                                                 462</h6>
                                                             <h5>Ingredients</h5>
                                                             <ul>
                                                                 <li>Steak</li>
                                                                 <li>Asparagus</li>
-                                                                <li>Garlic (optional)</li>
-                                                                <li>Rice (optional)</li>
+                                                                <li>Garlic
+                                                                    (optional)</li>
+                                                                <li>Rice
+                                                                    (optional)</li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="recipe" data-calories="377"
-                                            data-time="30" data-name="Garlic Butter Baked Chicken Breast" data-numing="3"
-                                            data-cost="8">
+                                            <div class="recipe"
+                                                data-calories="377"
+                                                data-time="30" data-name="Garlic
+                                                Butter Baked Chicken Breast"
+                                                data-numing="3"
+                                                data-cost="8">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-3
@@ -309,12 +342,17 @@
                                                         </div>
                                                         <div class="col-md-6
                                                             recipe-content">
-                                                            <a href="https://www.primaverakitchen.com/garlic-butter-baked-chicken-breast/"><h3>Garlic Butter Baked Chicken Breast</h3></a>
+                                                            <a
+                                                                href="https://www.primaverakitchen.com/garlic-butter-baked-chicken-breast/"><h3>Garlic
+                                                                    Butter Baked
+                                                                    Chicken
+                                                                    Breast</h3></a>
                                                             <h6>Time: 30m | Cal:
                                                                 377</h6>
                                                             <h5>Ingredients</h5>
                                                             <ul>
-                                                                <li>Chicken Breast</li>
+                                                                <li>Chicken
+                                                                    Breast</li>
                                                                 <li>Garlic</li>
                                                                 <li>Butter</li>
                                                             </ul>
@@ -322,9 +360,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="recipe" data-calories="610"
-                                            data-time="25" data-name="Steak and Eggs" data-numing="4"
-                                            data-cost="14">
+                                            <div class="recipe"
+                                                data-calories="610"
+                                                data-time="25" data-name="Steak
+                                                and
+                                                Eggs" data-numing="4"
+                                                data-cost="14">
                                                 <div class="container">
                                                     <div class="row">
                                                         <div class="col-md-3
@@ -334,7 +375,9 @@
                                                         </div>
                                                         <div class="col-md-6
                                                             recipe-content">
-                                                            <a href="https://diethood.com/steak-and-eggs-recipe/"><h3>Steak and Eggs</h3></a>
+                                                            <a
+                                                                href="https://diethood.com/steak-and-eggs-recipe/"><h3>Steak
+                                                                    and Eggs</h3></a>
                                                             <h6>Time: 25m | Cal:
                                                                 610</h6>
                                                             <h5>Ingredients</h5>
@@ -544,23 +587,24 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Optional JavaScript -->
-                            <script src="script/script.js"></script>
-                            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-                            <script
-                                src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-                                crossorigin="anonymous"></script>
-                            <script
-                                src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-                                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-                                crossorigin="anonymous"></script>
-                            <script
-                                src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-                                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-                                crossorigin="anonymous"></script>
+                        <!-- Optional JavaScript -->
+                        <script src="script/script.js"></script>
+                        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                        <script
+                            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                            crossorigin="anonymous"></script>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+                            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                            crossorigin="anonymous"></script>
+                        <script
+                            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+                            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                            crossorigin="anonymous"></script>
 
-                            <script src="script/sortbyname.js"></script>
-                        </body>
-                    </html>
+                        <script src="script/sortbuttons.js"></script>
+                    </body>
+                </html>
