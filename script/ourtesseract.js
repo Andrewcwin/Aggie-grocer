@@ -12,12 +12,23 @@ fileSelector.addEventListener('change', (event) => {
         document.getElementById('display-image').innerHTML = text;
 
         // get usable text
+        var rawDat = new text.split();
+        var ingredients = []; // ingredients as string[]
 
-        var arr = ['foo', 'bar', 'baz']; // ingredients as string[]
-        var json_str = JSON.stringify(arr);
+        for (var i = 0; i < rawDat.length; i++) {
+            if (onlyLetters(rawDat[i])) {
+                ingredients.push(rawDat[i]);
+            }
+        }
+
+        var json_str = JSON.stringify(ingredients);
         setCookie('ingredients', json_str);
     })
 });
+
+function onlyLetters(str) {
+    return /^[a-zA-Z]+$/.test(str);
+  }
 
 function setCookie(name, value, days) {
     var expires = "";
