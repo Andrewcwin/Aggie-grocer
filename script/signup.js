@@ -9,8 +9,8 @@ form.addEventListener('submit', (event) => {
 
     // save user info
     // for demo sign in as testuser
-    setCookie('user', 'testuser', 10);
-    setCookie('name', 'Test User', 10);
+    setCookie('user', email, 10);
+    setCookie('name', name, 10);
 
     if (form.checkbox.checked) {
         form.submit();
