@@ -9,8 +9,7 @@ path_to_tesseract = 'programs/Tesseract-OCR/tesseract.exe'
 dataset = []
 
 # TODO: Find user, append items
-username = input("Username: ")
-dataset.add(username)
+#username = input("Username: ")
 
 path_to_image = 'image/grocery2.jpg'
 pytesseract.tesseract_cmd = path_to_tesseract
