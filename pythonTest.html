@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample Home Page</title>
+</head>
+<body>
+<! -- Calls a function on the page load. -- >
+<element onload="myfunction_onload">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<! -- This script runs the python script on the page load -->
+<script>
+function postData(input) {
+    $.ajax({
+        type: "POST",
+        url: "/image_extract.py",
+        data: { param: input },
+        success: callbackFunc
+    });
+}
+
+function callbackFunc(response) {
+    // do something with the response
+    console.log(response);
+}
+
+postData('data to process');
+</script>
+
+
+</body>
+</html>

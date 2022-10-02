@@ -41,3 +41,27 @@
     margin-top: 50%;
     object-fit: scale-down;
 }
+
+.nav-side-menu {
+    list-style-type: none;
+}
+
+.nav-side-menu li {
+    padding: 10px 0;
+    text-align: center;
+    margin-left: -24px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.nav-side-menu li:hover {
+    color: gray;
+}
+
+.recipe {
+    margin: 12px 0;
+}
+
+.recipe h3 {
+    color: #2c8746;
+}
